@@ -1,0 +1,1833 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SharpOfClans</name>
+    </assembly>
+    <members>
+        <member name="T:SharpOfClans.ClashApi">
+            <summary>
+            Clash Of Clans API entrypoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.ClashApi.GetInstance(System.String)">
+            <summary>
+            Gets or creates a new instance of ClashApi.
+            </summary>
+            <param name="token">Your Clash of Clans development token.</param>
+            <returns>The <see cref="T:SharpOfClans.ClashApi"/> instance.</returns>
+        </member>
+        <member name="P:SharpOfClans.ClashApi.Clans">
+            <summary>
+            Clans Endpoint.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.ClashApi.Players">
+            <summary>
+            Players Endpoint.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.ClashApi.Leagues">
+            <summary>
+            Leagues Endpoint.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.ClashApi.Locations">
+            <summary>
+            Locations Endpoint.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.ClashApi.Goldpass">
+            <summary>
+            Goldpass Endpoint.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.ClashApi.Labels">
+            <summary>
+            Labels Endpoint.
+            </summary>
+        </member>
+        <member name="T:SharpOfClans.ClashApiException">
+            <summary>
+            The exception thrown when a call to the Clash of Clans API fails.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.ClashApiException.HttpStatusCode">
+            <summary>
+            HTTP status code that caused the exception.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.ClashApiException.#ctor(System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Creates a <see cref="T:SharpOfClans.ClashApiException"/>.
+            </summary>
+            <param name="message">The exceptions' message.</param>
+            <param name="httpStatusCode">The HTTP status code that caused the exception.</param>
+        </member>
+        <member name="T:SharpOfClans.Converters.CustomDateTimeConverter">
+            <summary>
+            Class which specifies the date time format to use in conversion.
+            </summary>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.ClansEndpoint">
+            <summary>
+            Implementation of <see cref="T:SharpOfClans.Endpoints.Interfaces.IClansEndpoint"/>.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.#ctor(SharpOfClans.Http.Interfaces.IRequester)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpOfClans.Endpoints.ClansEndpoint"/> class.
+            </summary>
+            <param name="requester">The <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/> to use.</param>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.GetCurrentCwlGroupAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.GetCwlWarAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.GetClanWarLogAsync(System.String,SharpOfClans.Paging.PagingFilter)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.SearchClansAsync(SharpOfClans.Endpoints.Structs.SearchFilter,SharpOfClans.Paging.PagingFilter)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.GetCurrentClanWarAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.GetClanAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.ClansEndpoint.GetClanMembersAsync(System.String,SharpOfClans.Paging.PagingFilter)">
+            <inheritdoc />
+        </member>
+        <member name="T:SharpOfClans.Endpoints.GoldpassEndpoint">
+            <summary>
+            Implementation of <see cref="T:SharpOfClans.Endpoints.Interfaces.IGoldpassEndpoint"/>.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.GoldpassEndpoint.#ctor(SharpOfClans.Http.Interfaces.IRequester)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpOfClans.Endpoints.GoldpassEndpoint"/> class.
+            </summary>
+            <param name="requester">The <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/> to use.</param>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.GoldpassEndpoint.GetCurrentGoldpassSeasonAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Interfaces.IClansEndpoint">
+            <summary>
+            Clans Endpoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentCwlGroupAsync(System.String)">
+            <summary>
+            Retrieves clan's current clan war league group.
+            </summary>
+            <param name="clanTag">The clan's tag.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCwlWarAsync(System.String)">
+            <summary>
+            Retrieves league war for specific clan war.
+            </summary>
+            <param name="warTag">The tag of the war.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanWarLogAsync(System.String,SharpOfClans.Paging.PagingFilter)">
+            <summary>
+            Retrieves the clan's war log.
+            </summary>
+            <param name="clanTag">The clan's tag.</param>
+            <param name="pagingFilter">The paging filter for the search.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Clans.War.PastWar"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.SearchClansAsync(SharpOfClans.Endpoints.Structs.SearchFilter,SharpOfClans.Paging.PagingFilter)">
+            <summary>
+            Retrieves a list of clans according to specified search filter.
+            </summary>
+            <remarks>
+            At least one filtering criteria must be defined and if name is used as part of search,
+            it is required to be at least three characters long.
+            </remarks>
+            <param name="searchFilter">The search filter for the search.</param>
+            <param name="pagingFilter">The paging filter for the search.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Clans.Clan"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentClanWarAsync(System.String)">
+            <summary>
+            Retrieves current clan war by clan tag.
+            </summary>
+            <remarks>
+            At least one filter must be applied
+            </remarks>
+            <param name="clanTag">The clan's tag.</param>
+            <returns>A <see cref="T:SharpOfClans.Models.Clans.War.CurrentWar"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanAsync(System.String)">
+            <summary>
+            Retrieves clan by specified clan tag.
+            </summary>
+            <param name="clanTag">The clan's tag.</param>
+            <returns>A <see cref="T:SharpOfClans.Models.Clans.Clan"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanMembersAsync(System.String,SharpOfClans.Paging.PagingFilter)">
+            <summary>
+            Retrieves a list of the clan's members.
+            </summary>
+            <param name="clanTag">The clan's tag.</param>
+            <param name="pagingFilter">The paging filter for the search.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Clans.Member"/>.</returns>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Interfaces.IGoldpassEndpoint">
+            <summary>
+            Goldpass Endpoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IGoldpassEndpoint.GetCurrentGoldpassSeasonAsync">
+            <summary>
+            Retrieves current goldpass season.
+            </summary>
+            <returns>A <see cref="T:SharpOfClans.Models.Goldpass.GoldpassSeason"/>.</returns>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Interfaces.ILabelsEndpoint">
+            <summary>
+            Labels Endpoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILabelsEndpoint.GetPlayerLabelsAsync">
+            <summary>
+            Retrieves a list of player labels.
+            </summary>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Labels.Label"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILabelsEndpoint.GetClanLabelsAsync">
+            <summary>
+            Retrieves a list of clan labels.
+            </summary>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Labels.Label"/>.</returns>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint">
+            <summary>
+            LeagueNames Endpoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.GetLeaguesAsync">
+            <summary>
+            Retrieves leagues list.
+            </summary>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Leagues.League"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.GetLeagueSeasonRankingsAsync(SharpOfClans.Models.Leagues.Enums.Leagues,System.String,SharpOfClans.Paging.PagingFilter)">
+            <summary>
+            Retrieves specified league season rankings.
+            </summary>
+            <remarks>
+            League season information is available only for Legend League.
+            <br/>
+            It's recommended to specify a paging filter with a limit as the call can take several seconds if no limit is applied.
+            </remarks>
+            <param name="league">The league.</param>
+            <param name="seasonId">The season id.</param>
+            <param name="pagingFilter">The paging filter for the search.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Rankings.PlayerRanking"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.GetLeagueInfoAsync(SharpOfClans.Models.Leagues.Enums.Leagues)">
+            <summary>
+            Retrieve league information.
+            </summary>
+            <param name="league">The league.</param>
+            <returns>A <see cref="T:SharpOfClans.Models.Leagues.League"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.GetLeagueSeasonsAsync(SharpOfClans.Models.Leagues.Enums.Leagues)">
+            <summary>
+            Retrieve league seasons.
+            </summary>
+            <remarks>
+            League season information is available only for Legend League.
+            </remarks>
+            <param name="league">The league.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Leagues.LeagueSeason"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.GetWarLeagueAsync(SharpOfClans.Models.Leagues.Enums.WarLeagues)">
+            <summary>
+            Retrieve war league information.
+            </summary>
+            <param name="league">The league.</param>
+            <returns>A <see cref="T:SharpOfClans.Models.Clans.War.WarLeague"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.GetWarLeaguesAsync">
+            <summary>
+            Retrieve war leagues list.
+            </summary>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Clans.War.WarLeague"/>.</returns>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint">
+            <summary>
+            Locations Endpoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.GetLocationClanRankingsAsync(System.Int32)">
+            <summary>
+            Retrieves clan rankings for a specific location.
+            </summary>
+            <param name="locationId">The location id.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Rankings.ClanRanking"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.GetLocationPlayerRankingsAsync(System.Int32)">
+            <summary>
+            Retrieves player rankings for a specific location.
+            </summary>
+            <param name="locationId">The location id.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Rankings.PlayerRanking"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.GetLocationClansVersusRankingsAsync(System.Int32)">
+            <summary>
+            Retrieves clan versus rankings for a specific location.
+            </summary>
+            <param name="locationId">The location id.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Rankings.ClanVersusRanking"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.GetLocationPlayersVersusRankingsAsync(System.Int32)">
+            <summary>
+            Retrieves player versus rankings for a specific location.
+            </summary>
+            <param name="locationId">The location id.</param>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Rankings.PlayerVersusRanking"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.GetLocationsListAsync">
+            <summary>
+            Retrieves locations list.
+            </summary>
+            <returns>An <see cref="T:SharpOfClans.Models.Common.ItemsList`1"/> whose generic type argument is <see cref="T:SharpOfClans.Models.Locations.Location"/>.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.GetLocationInfoAsync(System.Int32)">
+            <summary>
+            Retrieves specific location information.
+            </summary>
+            <param name="locationId">The location id.</param>
+            <returns>A <see cref="T:SharpOfClans.Models.Locations.Location"/>.</returns>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Interfaces.IPlayersEndpoint">
+            <summary>
+            Players Endpoint.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IPlayersEndpoint.GetPlayerAsync(System.String)">
+            <summary>
+            Retrieve player by tag.
+            </summary>
+            <param name="tag">The player tag of the player you want to search.</param>
+            <returns>A player.</returns>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Interfaces.IPlayersEndpoint.VerifyPlayerTokenAsync(System.String,System.String)">
+            <summary>
+            Verify player token.
+            </summary>
+            <param name="tag">The player tag of the player you want to search.</param>
+            <param name="token">The player token you want to verify.</param>
+            <returns>A player token response.</returns>
+        </member>
+        <member name="T:SharpOfClans.Endpoints.LabelsEndpoint">
+            <summary>
+            Implementation of <see cref="T:SharpOfClans.Endpoints.Interfaces.ILabelsEndpoint"/>.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LabelsEndpoint.#ctor(SharpOfClans.Http.Interfaces.IRequester)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpOfClans.Endpoints.LabelsEndpoint"/> class.
+            </summary>
+            <param name="requester">The <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/> to use.</param>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LabelsEndpoint.GetPlayerLabelsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LabelsEndpoint.GetClanLabelsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.#ctor(SharpOfClans.Http.Interfaces.IRequester)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpOfClans.Endpoints.LeaguesEndpoint"/> class.
+            </summary>
+            <param name="requester">The <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/> to use.</param>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.GetLeaguesAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.GetLeagueSeasonRankingsAsync(SharpOfClans.Models.Leagues.Enums.Leagues,System.String,SharpOfClans.Paging.PagingFilter)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.GetLeagueInfoAsync(SharpOfClans.Models.Leagues.Enums.Leagues)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.GetLeagueSeasonsAsync(SharpOfClans.Models.Leagues.Enums.Leagues)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.GetWarLeagueAsync(SharpOfClans.Models.Leagues.Enums.WarLeagues)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LeaguesEndpoint.GetWarLeaguesAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:SharpOfClans.Endpoints.LocationsEndpoint">
+            <summary>
+            Implementation of <see cref="T:SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint"/>.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.#ctor(SharpOfClans.Http.Interfaces.IRequester)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpOfClans.Endpoints.LocationsEndpoint"/> class.
+            </summary>
+            <param name="requester">The <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/> to use.</param>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.GetLocationClanRankingsAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.GetLocationPlayerRankingsAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.GetLocationClansVersusRankingsAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.GetLocationPlayersVersusRankingsAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.GetLocationsListAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.LocationsEndpoint.GetLocationInfoAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:SharpOfClans.Endpoints.PlayersEndpoint">
+            <summary>
+            Implementation of <see cref="T:SharpOfClans.Endpoints.Interfaces.IPlayersEndpoint"/>.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.PlayersEndpoint.#ctor(SharpOfClans.Http.Interfaces.IRequester)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpOfClans.Endpoints.PlayersEndpoint"/> class.
+            </summary>
+            <param name="requester">The <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/> to use.</param>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.PlayersEndpoint.GetPlayerAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Endpoints.PlayersEndpoint.VerifyPlayerTokenAsync(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:SharpOfClans.Endpoints.Structs.SearchFilter">
+            <summary>
+            Used to filter the results when searching for clans.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.ClanName">
+            <summary>
+            Search clans by name.
+            </summary>
+            <remarks>
+            If name is used as part of search query, it needs to be at least three characters long.
+            Name search parameter is interpreted as wild card search, so it may appear anywhere in the clan name.
+            </remarks>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.WarFrequency">
+            <summary>
+            Filter by clan war frequency.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.LocationId">
+            <summary>
+            Filter by clan location identifier.
+            </summary>
+            <remarks>
+            For a list of available locations, refer to <see cref="T:SharpOfClans.Endpoints.LocationsEndpoint"/>.
+            </remarks>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.MinMembers">
+            <summary>
+            Filter by minimum number of clan members.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.MaxMembers">
+            <summary>
+            Filter by maximum number of clan members.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.MinClanPoints">
+            <summary>
+            Filter by minimum amount of clan points.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.MinClanLevel">
+            <summary>
+            Filter by minimum clan level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Endpoints.Structs.SearchFilter.LabelIds">
+            <summary>
+            A list of label IDs to use for filtering results.
+            </summary>
+            <remarks>
+            For a list of available labels, refer to <see cref="T:SharpOfClans.Endpoints.LabelsEndpoint"/>.
+            </remarks>
+        </member>
+        <member name="M:SharpOfClans.Endpoints.Structs.SearchFilter.ToDictionary">
+            <summary>
+            Creates a dictionary according to the values in the struct's properties.
+            </summary>
+            <returns>A dictionary where the key and value are the property name and it's value respectively.</returns>
+        </member>
+        <member name="T:SharpOfClans.Http.Interfaces.IRequester">
+            <summary>
+            Requester interface.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Http.Interfaces.IRequester.GetAndDeserializeAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Executes a GET request to specified url.
+            </summary>
+            <typeparam name="T">The .NET type to deserialize the object to.</typeparam>
+            <param name="relativeUrl">The relative url of the request.</param>
+            <param name="queryParams">The query parameters to send with the request.</param>
+            <returns>The deserialized object.</returns>
+        </member>
+        <member name="M:SharpOfClans.Http.Interfaces.IRequester.PostAndDeserializeAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            Executes a POST request to specified url.
+            </summary>
+            <typeparam name="T">The .NET type to deserialize the object to.</typeparam>
+            <param name="relativeUrl">The relative url of the request.</param>
+            <param name="queryParams">The query parameters to send with the request.</param>
+            <param name="requestBody">The request body to send with the request.</param>
+            <returns>The deserialized object.</returns>
+        </member>
+        <member name="T:SharpOfClans.Http.Requester">
+            <summary>
+            Implementation of <see cref="T:SharpOfClans.Http.Interfaces.IRequester"/>.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Http.Requester.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:SharpOfClans.Http.Requester"/>.
+            </summary>
+            <param name="token">The Clash of Clans API token.</param>
+        </member>
+        <member name="M:SharpOfClans.Http.Requester.GetAndDeserializeAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Http.Requester.PostAndDeserializeAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:SharpOfClans.Http.RequesterBase.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:SharpOfClans.Http.RequesterBase" />.
+            </summary>
+            <param name="token">Your Clash of Clans development token.</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:SharpOfClans.Http.RequesterBase.CreateRequest(System.String,RestSharp.Method,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            Creates and executes a request with specified options.
+            </summary>
+            <param name="relativeUrl">The relative url to send the request.</param>
+            <param name="httpMethod">The <see cref="T:RestSharp.Method" /> for the request.</param>
+            <param name="queryParams">A list with parameters to include in the query.</param>
+            <param name="requestBody">The body to send with the request.</param>
+            <returns>A string with the response content.</returns>
+        </member>
+        <member name="M:SharpOfClans.Http.RequesterBase.ExecuteRequestAsync(RestSharp.RestRequest)">
+            <summary>
+            Executes the specified request.
+            </summary>
+            <param name="request">The request to execute.</param>
+            <returns>The request response as <see cref="T:RestSharp.IRestResponse" />.</returns>
+        </member>
+        <member name="M:SharpOfClans.Http.RequesterBase.HandleFailedRequest(RestSharp.IRestResponse)">
+            <summary>
+            Handles the error from a response.
+            </summary>
+            <param name="response">The received response.</param>
+        </member>
+        <member name="M:SharpOfClans.Http.RequesterBase.FormatExceptionMessage(SharpOfClans.Models.Common.FailedRequest)">
+            <summary>
+            Formats the exception message.
+            </summary>
+            <param name="failedRequest">The failed request.</param>
+            <returns>The formatted exception message.</returns>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Type">
+            <summary>
+            The clan's type.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Description">
+            <summary>
+            The clan's description.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Location">
+            <summary>
+            The clan's location.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.BadgeUrls">
+            <summary>
+            The clan's badge urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.ClanPoints">
+            <summary>
+            The clan's points.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.ClanVersusPoints">
+            <summary>
+            The clan's versus points.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.RequiredTrophies">
+            <summary>
+            The clan's required trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.WarFrequency">
+            <summary>
+            The clan's war frequency.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.WarWinStreak">
+            <summary>
+            The clan's war win streak.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.WarWins">
+            <summary>
+            The clan's total wins in clan wars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.WarTies">
+            <summary>
+            The clan's total ties in clan wars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.WarLosses">
+            <summary>
+            The clan's total losses in clan wars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.IsWarLogPublic">
+            <summary>
+            The clan's war log privacy state.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.WarLeague">
+            <summary>
+            The clan's war league.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Members">
+            <summary>
+            The clan's total members.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.MemberList">
+            <summary>
+            The clan's member list.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Clan.Labels">
+            <summary>
+            The clan's labels.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.GroupState.Preparation">
+            <summary>
+            The league's group is in preparation phase.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.GroupState.InWar">
+            <summary>
+            The league's group is in war.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.GroupState.Ended">
+            <summary>
+            The league's group has ended.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarFrequency.Unknown">
+            <summary>
+            The clan's war frequency is unknown.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarFrequency.Never">
+            <summary>
+            The clan's war frequency is never.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarFrequency.LessThanOncePerWeek">
+            <summary>
+            The clan's war frequency is less than once per week.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarFrequency.OncePerWeek">
+            <summary>
+            The clan's war frequency is once per week.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarFrequency.MoreThanOncePerWeek">
+            <summary>
+            The clan's war frequency is more than once per week.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarFrequency.Always">
+            <summary>
+            The clan's war frequency is always.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarState.NotInWar">
+            <summary>
+            The clan doesn't have an active war.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarState.Preparation">
+            <summary>
+            The war is in the preparation day.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarState.InWar">
+            <summary>
+            The war is in the battle day.
+            </summary>
+        </member>
+        <member name="F:SharpOfClans.Models.Clans.Enums.WarState.WarEnded">
+            <summary>
+            The war has ended.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.Role">
+            <summary>
+            The player's role in the clan.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.ExpLevel">
+            <summary>
+            The player's experience level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.League">
+            <summary>
+            The player's league.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.Trophies">
+            <summary>
+            The player's trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.VersusTrophies">
+            <summary>
+            The player's trophies in versus battles.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.ClanRank">
+            <summary>
+            The player's clan ranking.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.PreviousClanRank">
+            <summary>
+            The player's previous clan ranking.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.Donations">
+            <summary>
+            The player's donations.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.Member.DonationsReceived">
+            <summary>
+            The player's received donations.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlClan.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlClan.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlClan.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlClan.BadgeUrls">
+            <summary>
+            The clan's badge urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlClan.Members">
+            <summary>
+            The clan's member list.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlGroup.State">
+            <summary>
+            The CWL's group state.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlGroup.Season">
+            <summary>
+            The CWL's group season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlGroup.Clans">
+            <summary>
+            The CWL's group participating clans.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlGroup.Rounds">
+            <summary>
+            The CWL's group rounds.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlMember.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlMember.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlMember.TownHallLevel">
+            <summary>
+            The player's townhall level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.CwlRound.WarTags">
+            <summary>
+            A list of war tags for each CWL round wars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.AttackerTag">
+            <summary>
+            The attacker's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.DefenderTag">
+            <summary>
+            The defender's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.Stars">
+            <summary>
+            The attack's total stars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.DestructionPercentage">
+            <summary>
+            The attack's village destruction percentage.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.Order">
+            <summary>
+            The attack's order.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.Duration">
+            <summary>
+            The attack's duration.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.State">
+            <summary>
+            The war's current state.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.TeamSize">
+            <summary>
+            The amount of players on each side.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.PreparationStartTime">
+            <summary>
+            The time at which the round preparation starts.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.StartTime">
+            <summary>
+            The time at which the round starts.
+            </summary>
+            <remarks> The same as <see cref="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.WarStartTime"/></remarks>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.EndTime">
+            <summary>
+            The time at which the round ends.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.ClanOne">
+            <summary>
+            One of the war's participating clan.
+            </summary>
+            <remarks> The "default" clan returned by CoC API. </remarks>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.ClanTwo">
+            <summary>
+            One of the war's participating clan.
+            </summary>
+            <remarks> The "opponent" clan returned by CoC API. </remarks>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.WarStartTime">
+            <summary>
+            The time at which the war starts. 
+            </summary>
+            <remarks> The same as <see cref="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.StartTime"/></remarks>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.BadgeUrls">
+            <summary>
+            The clan's badge urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.Attacks">
+            <summary>
+            The clan's total attacks.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.Stars">
+            <summary>
+            The clan's stars in the war.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.DestructionPercentage">
+            <summary>
+            The clan's total destruction percentage.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.Members">
+            <summary>
+            The clan's war members list.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.TownhallLevel">
+            <summary>
+            The player's townhall level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.MapPosition">
+            <summary>
+            The player's position in map.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.OpponentAttacks">
+            <summary>
+            The player's total times attacked by the opponents.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.Attacks">
+            <summary>
+            The list of the player's attacks.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.BestOpponentAttack">
+            <summary>
+            The best opponent attack.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.Attack.AttackerTag">
+            <summary>
+            The attacker's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.Attack.DefenderTag">
+            <summary>
+            The defender's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.Attack.Stars">
+            <summary>
+            The attack's total stars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.Attack.DestructionPercentage">
+            <summary>
+            The attack's village destruction percentage.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.Attack.Order">
+            <summary>
+            The attack's order.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.Attack.Duration">
+            <summary>
+            The attack's duration.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.State">
+            <summary>
+            The war's current state.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.TeamSize">
+            <summary>
+            The amount of players on each side.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.PreparationStartTime">
+            <summary>
+            The time at which the preparation starts.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.WarStartTime">
+            <summary>
+            The time at which the war starts.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.WarEndTime">
+            <summary>
+            The time at which the war ends.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.FriendlyClan">
+            <summary>
+            The clan you searched for.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.CurrentWar.OpponentClan">
+            <summary>
+            The opponent clan of the clan you searched for.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.PastWar.Result">
+            <summary>
+            The result of the war.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.PastWar.EndTime">
+            <summary>
+            The time at which the war ended.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.PastWar.TeamSize">
+            <summary>
+            The amount of players on each side.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.PastWar.Clan">
+            <summary>
+            The clan you searched for.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.PastWar.Opponent">
+            <summary>
+            The opponent clan of the clan you searched for.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.BadgeUrls">
+            <summary>
+            The clan's badge urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.Attacks">
+            <summary>
+            The clan's total attacks.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.Stars">
+            <summary>
+            The clan's stars in the war.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.ExpEarned">
+            <summary>
+            The clan's experience earned.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.DestructionPercentage">
+            <summary>
+            The clan's total destruction percentage.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarClan.Members">
+            <summary>
+            The clan's war members list.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarLeague.Id">
+            <summary>
+            The war league's id.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarLeague.Name">
+            <summary>
+            The war league's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.TownhallLevel">
+            <summary>
+            The player's townhall level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.MapPosition">
+            <summary>
+            The player's position in map.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.OpponentAttacks">
+            <summary>
+            The player's total times attacked by the opponents.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.BestOpponentAttack">
+            <summary>
+            The best opponent attack.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Clans.War.WarMember.Attacks">
+            <summary>
+            The list of the player's attacks.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.BadgeUrls.Small">
+            <summary>
+            The url to the badge's 70x70 size.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.BadgeUrls.Medium">
+            <summary>
+            The url to the badge's 200x200 size.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.BadgeUrls.Large">
+            <summary>
+            The url to the badge's 512x512 size.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.FailedRequest.Reason">
+            <summary>
+            The reason for the request failure.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.FailedRequest.Message">
+            <summary>
+            The message accompanied by the failure.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.FailedRequest.Type">
+            <summary>
+            The type of the failure.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.IconUrls.Tiny">
+            <summary>
+            The url to the icon's 36x36 size.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.IconUrls.Small">
+            <summary>
+            The url to the icon's 72x72 size.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.IconUrls.Medium">
+            <summary>
+            The url to the icon's 288x288 size.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.ItemsList`1.Items">
+            <summary>
+            A list of <typeparamref name="T"/>.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Common.ItemsList`1.Paging">
+            <summary>
+            Paging returned by the API in order to navigate through long responses.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Goldpass.GoldpassSeason.StartTime">
+            <summary>
+            Season start time.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Goldpass.GoldpassSeason.EndTime">
+            <summary>
+            Season end time.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Labels.Label.Id">
+            <summary>
+            The label's id.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Labels.Label.Name">
+            <summary>
+            The label's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Labels.Label.IconUrls">
+            <summary>
+            The label's icon's urls.
+            </summary>
+        </member>
+        <member name="T:SharpOfClans.Models.Leagues.Enums.Leagues">
+            <summary>
+            Leagues enum.
+            </summary>
+        </member>
+        <member name="T:SharpOfClans.Models.Leagues.Enums.WarLeagues">
+            <summary>
+            War leagues enum.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.League.Id">
+            <summary>
+            The league's id.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.League.Name">
+            <summary>
+            The league's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.League.IconUrls">
+            <summary>
+            The league's icon urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LeagueSeason.Id">
+            <summary>
+            The league season id.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendLeagueTournamentSeason.Trophies">
+            <summary>
+            Total trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendLeagueTournamentSeason.Id">
+            <summary>
+            League season id.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendLeagueTournamentSeason.Rank">
+            <summary>
+            Player's rank in the season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendStatistics.PreviousSeason">
+            <summary>
+            Previous legend league season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendStatistics.BestSeason">
+            <summary>
+            Best legend league season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendStatistics.BestVersusSeason">
+            <summary>
+            Best versus legend league season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendStatistics.CurrentSeason">
+            <summary>
+            Current legend season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendStatistics.PreviousVersusSeason">
+            <summary>
+            Previous versus legend league season.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Leagues.LegendStatistics.LegendTrophies">
+            <summary>
+            Total legend trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Locations.Location.Id">
+            <summary>
+            The location's id.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Locations.Location.Name">
+            <summary>
+            The location's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Locations.Location.IsCountry">
+            <summary>
+            Returns <see langword="true"></see> if the location is a country.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Locations.Location.CountryCode">
+            <summary>
+            The location's country code as per the <em>ISO 3166-1 alfa-2</em> standard.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.ItemLevelLists.PlayerItemLevelList.Name">
+            <summary>
+            The name of the entity.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.ItemLevelLists.PlayerItemLevelList.Level">
+            <summary>
+            The level of the entity.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.ItemLevelLists.PlayerItemLevelList.MaxLevel">
+            <summary>
+            The max level of the entity.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.ItemLevelLists.PlayerItemLevelList.Village">
+            <summary>
+            The village the entity is in.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.ItemLevelLists.Troop.SuperTroopIsActive">
+            <summary>
+            Whether the super troop is active or not.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Clan">
+            <summary>
+            The player's clan.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.League">
+            <summary>
+            The player's league.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Role">
+            <summary>
+            The player's role in the clan he's in.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.AttackWins">
+            <summary>
+            The player's total attack wins.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.DefenseWins">
+            <summary>
+            The player's total defense wins.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.TownHallLevel">
+            <summary>
+            The player's townhall level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.TownHallWeaponLevel">
+            <summary>
+            The player's townhall weapon level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.VersusBattleWins">
+            <summary>
+            The player's total wins in versus battles.
+            <remarks><para>Apparently the same as <see cref="P:SharpOfClans.Models.Players.Player.VersusBattleWinCount"/></para></remarks>
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.LegendStatistics">
+            <summary>
+            The player's statistics in the legend league.
+            <remarks><para>Will be null if the player's isn't in the legend league.</para></remarks>
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Troops">
+            <summary>
+            A list of the player's troops.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Heroes">
+            <summary>
+            A list of the player's heroes.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Spells">
+            <summary>
+            A list of the player's spells.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Labels">
+            <summary>
+            A list of the player's labels.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.ExpLevel">
+            <summary>
+            The player's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Trophies">
+            <summary>
+            The player's current trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.BestTrophies">
+            <summary>
+            The player's best trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Donations">
+            <summary>
+            The player's total donations.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.DonationsReceived">
+            <summary>
+            The player's total donations received.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.BuilderHallLevel">
+            <summary>
+            The player's builder hall level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.VersusTrophies">
+            <summary>
+            The player's current trophies in versus battles. 
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.BestVersusTrophies">
+            <summary>
+            The player's best trophies in versus battles.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.WarStars">
+            <summary>
+            The player's total war stars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.Achievements">
+            <summary>
+            A list of the player's achievements.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.Player.VersusBattleWinCount">
+            <summary>
+            The player's total wins in versus battles.
+            <remarks><para>Apparently the same as <see cref="P:SharpOfClans.Models.Players.Player.VersusBattleWins"/>.</para></remarks>
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.Name">
+            <summary>
+            The achievments' name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.Stars">
+            <summary>
+            The achievments' current stars.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.Value">
+            <summary>
+            The achievments' current value.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.Target">
+            <summary>
+            The achievements' target value.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.Info">
+            <summary>
+            The achievements' objective.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.CompletionInfo">
+            <summary>
+            The achievements' progress on the objective.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerAchievementProgress.Village">
+            <summary>
+            The village in which the achievement applies to.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerClan.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerClan.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerClan.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerClan.BadgeUrls">
+            <summary>
+            The clan's badge urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerToken.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerToken.Token">
+            <summary>
+            The player's token.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Players.PlayerToken.Status">
+            <summary>
+            The token validation status.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.Location">
+            <summary>
+            The clan's location.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.BadgeUrls">
+            <summary>
+            The clan's badges urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.Members">
+            <summary>
+            The clan's total members.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.ClanPoints">
+            <summary>
+            The clan's points.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.Rank">
+            <summary>
+            The clan's ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanRanking.PreviousRank">
+            <summary>
+            The clan's previous ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.Location">
+            <summary>
+            The clan's location.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.BadgeUrls">
+            <summary>
+            The clan's badges urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.ClanLevel">
+            <summary>
+            The clan's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.Members">
+            <summary>
+            The clan's total members.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.Rank">
+            <summary>
+            The clan's ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.PreviousRank">
+            <summary>
+            The clan's previous ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.ClanVersusRanking.ClanVersusPoints">
+            <summary>
+            The clan's versus points.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.ExpLevel">
+            <summary>
+            The player's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.Trophies">
+            <summary>
+            The player's current trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.AttackWins">
+            <summary>
+            The player's total attack wins.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.DefenseWins">
+            <summary>
+            The player's total defense wins.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.Rank">
+            <summary>
+            The player's ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.PreviousRank">
+            <summary>
+            The player's previous ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.Clan">
+            <summary>
+            The player's clan.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRanking.League">
+            <summary>
+            The player's league.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRankingClan.Tag">
+            <summary>
+            The clan's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRankingClan.Name">
+            <summary>
+            The clan's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerRankingClan.BadgeUrls">
+            <summary>
+            The clan's badges urls.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.Tag">
+            <summary>
+            The player's tag.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.Name">
+            <summary>
+            The player's name.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.ExpLevel">
+            <summary>
+            The player's level.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.Rank">
+            <summary>
+            The player's ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.PreviousRank">
+            <summary>
+            The player's previous ranking position.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.VersusTrophies">
+            <summary>
+            The player's versus trophies.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.Clan">
+            <summary>
+            The player's clan.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Models.Rankings.PlayerVersusRanking.VersusBattleWins">
+            <summary>
+            The player's total wins in versus battles.
+            </summary>
+        </member>
+        <member name="T:SharpOfClans.Paging.Paging">
+            <summary>
+            Class containing pagination info returned by Clash of Clans API.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Paging.Paging.Cursors">
+            <summary>
+            Cursors indicating which page you're on this specific request.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Paging.Cursors.After">
+            <summary>
+            Marker representing the next page.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Paging.Cursors.Before">
+            <summary>
+            Marker representing the previous page.
+            </summary>
+        </member>
+        <member name="M:SharpOfClans.Paging.PagingExtensions.NextPage(SharpOfClans.Paging.Paging)">
+            <summary>
+            Creates a paging filter with the marker for the next page.
+            </summary>
+            <param name="paging">The paging returned by a previous endpoint call.</param>
+            <returns>A paging filter with a cursor for the next page.</returns>
+        </member>
+        <member name="M:SharpOfClans.Paging.PagingExtensions.PreviousPage(SharpOfClans.Paging.Paging)">
+            <summary>
+            Creates a paging filter with the marker for the previous page.
+            </summary>
+            <param name="paging">The paging returned by a previous endpoint call.</param>
+            <returns>A paging filter with a cursor for the previous page.</returns>
+        </member>
+        <member name="T:SharpOfClans.Paging.PagingFilter">
+            <summary>
+            Used to navigate through CoC's API responses that contain paging.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Paging.PagingFilter.Limit">
+            <summary>
+            Limit the number of items returned in the response.
+            </summary>
+        </member>
+        <member name="P:SharpOfClans.Paging.PagingFilter.After">
+            <summary>
+            Return only items that occur after this marker.
+            Before marker can be found from the response, inside the 'paging' property.
+            </summary>
+            <remarks> Note that only after or before can be specified for a request, not both. </remarks>
+        </member>
+        <member name="P:SharpOfClans.Paging.PagingFilter.Before">
+            <summary>
+            Return only items that occur before this marker.
+            Before marker can be found from the response, inside the 'paging' property.
+            </summary>
+            <remarks> Note that only after or before can be specified for a request, not both. </remarks>
+        </member>
+        <member name="M:SharpOfClans.Paging.PagingFilter.ToDictionary">
+            <summary>
+            Creates a dictionary according to the values in the class' properties.
+            </summary>
+            <returns>A dictionary where the key and value are the property name and it's value respectively.</returns>
+        </member>
+    </members>
+</doc>
