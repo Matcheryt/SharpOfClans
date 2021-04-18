@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using SharpOfClans.Endpoints.Structs;
-using SharpOfClans.Models.Clans;
 using SharpOfClans.Models.Clans.Enums;
 
 namespace SharpOfClans.Tests
