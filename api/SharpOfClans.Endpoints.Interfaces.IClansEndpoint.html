@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IClansEndpoint
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IClansEndpoint
+   ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint">
+  
+  
+  <h1 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint" class="text-break">Interface IClansEndpoint
+  </h1>
+  <div class="markdown level0 summary"><p>Clans Endpoint.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SharpOfClans.Endpoints.Interfaces.html">SharpOfClans.Endpoints.Interfaces</a></h6>
+  <h6><strong>Assembly</strong>: SharpOfClans.dll</h6>
+  <h5 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IClansEndpoint</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanAsync_System_String_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L66">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanAsync_System_String_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanAsync(System.String)">GetClanAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves clan by specified clan tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Clan&gt; GetClanAsync(string clanTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>The clan's tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Clans.Clan.html">Clan</a>&gt;</td>
+        <td><p>A <a class="xref" href="SharpOfClans.Models.Clans.Clan.html">Clan</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanMembersAsync_System_String_SharpOfClans_Paging_PagingFilter_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanMembersAsync(System.String%2CSharpOfClans.Paging.PagingFilter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L74">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanMembersAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanMembersAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanMembersAsync_System_String_SharpOfClans_Paging_PagingFilter_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanMembersAsync(System.String,SharpOfClans.Paging.PagingFilter)">GetClanMembersAsync(String, PagingFilter)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a list of the clan's members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ItemsList&lt;Member&gt;&gt; GetClanMembersAsync(string clanTag, PagingFilter pagingFilter = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>The clan's tag.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SharpOfClans.Paging.PagingFilter.html">PagingFilter</a></td>
+        <td><span class="parametername">pagingFilter</span></td>
+        <td><p>The paging filter for the search.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Common.ItemsList-1.html">ItemsList</a>&lt;<a class="xref" href="SharpOfClans.Models.Clans.Member.html">Member</a>&gt;&gt;</td>
+        <td><p>An <a class="xref" href="SharpOfClans.Models.Common.ItemsList-1.html">ItemsList&lt;T&gt;</a> whose generic type argument is <a class="xref" href="SharpOfClans.Models.Clans.Member.html">Member</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanWarLogAsync_System_String_SharpOfClans_Paging_PagingFilter_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanWarLogAsync(System.String%2CSharpOfClans.Paging.PagingFilter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L37">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanWarLogAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanWarLogAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetClanWarLogAsync_System_String_SharpOfClans_Paging_PagingFilter_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetClanWarLogAsync(System.String,SharpOfClans.Paging.PagingFilter)">GetClanWarLogAsync(String, PagingFilter)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the clan's war log.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ItemsList&lt;PastWar&gt;&gt; GetClanWarLogAsync(string clanTag, PagingFilter pagingFilter = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>The clan's tag.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SharpOfClans.Paging.PagingFilter.html">PagingFilter</a></td>
+        <td><span class="parametername">pagingFilter</span></td>
+        <td><p>The paging filter for the search.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Common.ItemsList-1.html">ItemsList</a>&lt;<a class="xref" href="SharpOfClans.Models.Clans.War.PastWar.html">PastWar</a>&gt;&gt;</td>
+        <td><p>An <a class="xref" href="SharpOfClans.Models.Common.ItemsList-1.html">ItemsList&lt;T&gt;</a> whose generic type argument is <a class="xref" href="SharpOfClans.Models.Clans.War.PastWar.html">PastWar</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentClanWarAsync_System_String_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentClanWarAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L59">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentClanWarAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentClanWarAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentClanWarAsync_System_String_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentClanWarAsync(System.String)">GetCurrentClanWarAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves current clan war by clan tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;CurrentWar&gt; GetCurrentClanWarAsync(string clanTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>The clan's tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Clans.War.CurrentWar.html">CurrentWar</a>&gt;</td>
+        <td><p>A <a class="xref" href="SharpOfClans.Models.Clans.War.CurrentWar.html">CurrentWar</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentClanWarAsync_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>At least one filter must be applied</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentCwlGroupAsync_System_String_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentCwlGroupAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L22">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentCwlGroupAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentCwlGroupAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCurrentCwlGroupAsync_System_String_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCurrentCwlGroupAsync(System.String)">GetCurrentCwlGroupAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves clan's current clan war league group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;CwlGroup&gt; GetCurrentCwlGroupAsync(string clanTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clanTag</span></td>
+        <td><p>The clan's tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Clans.WarLeague.CwlGroup.html">CwlGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCwlWarAsync_System_String_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCwlWarAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L29">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCwlWarAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCwlWarAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_GetCwlWarAsync_System_String_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.GetCwlWarAsync(System.String)">GetCwlWarAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Retrieves league war for specific clan war.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;CwlWar&gt; GetCwlWarAsync(string warTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">warTag</span></td>
+        <td><p>The tag of the war.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.html">CwlWar</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint_SearchClansAsync_SharpOfClans_Endpoints_Structs_SearchFilter_SharpOfClans_Paging_PagingFilter_.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint.SearchClansAsync(SharpOfClans.Endpoints.Structs.SearchFilter%2CSharpOfClans.Paging.PagingFilter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L49">View Source</a>
+  </span>
+  <a id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_SearchClansAsync_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.SearchClansAsync*"></a>
+  <h4 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_SearchClansAsync_SharpOfClans_Endpoints_Structs_SearchFilter_SharpOfClans_Paging_PagingFilter_" data-uid="SharpOfClans.Endpoints.Interfaces.IClansEndpoint.SearchClansAsync(SharpOfClans.Endpoints.Structs.SearchFilter,SharpOfClans.Paging.PagingFilter)">SearchClansAsync(SearchFilter, PagingFilter)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a list of clans according to specified search filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ItemsList&lt;Clan&gt;&gt; SearchClansAsync(SearchFilter searchFilter, PagingFilter pagingFilter = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SharpOfClans.Endpoints.Structs.SearchFilter.html">SearchFilter</a></td>
+        <td><span class="parametername">searchFilter</span></td>
+        <td><p>The search filter for the search.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SharpOfClans.Paging.PagingFilter.html">PagingFilter</a></td>
+        <td><span class="parametername">pagingFilter</span></td>
+        <td><p>The paging filter for the search.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="SharpOfClans.Models.Common.ItemsList-1.html">ItemsList</a>&lt;<a class="xref" href="SharpOfClans.Models.Clans.Clan.html">Clan</a>&gt;&gt;</td>
+        <td><p>An <a class="xref" href="SharpOfClans.Models.Common.ItemsList-1.html">ItemsList&lt;T&gt;</a> whose generic type argument is <a class="xref" href="SharpOfClans.Models.Clans.Clan.html">Clan</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="SharpOfClans_Endpoints_Interfaces_IClansEndpoint_SearchClansAsync_SharpOfClans_Endpoints_Structs_SearchFilter_SharpOfClans_Paging_PagingFilter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>At least one filtering criteria must be defined and if name is used as part of search,
+it is required to be at least three characters long.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Matcheryt/SharpOfClans/new/master/apiSpec/new?filename=SharpOfClans_Endpoints_Interfaces_IClansEndpoint.md&amp;value=---%0Auid%3A%20SharpOfClans.Endpoints.Interfaces.IClansEndpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Matcheryt/SharpOfClans/blob/master/SharpOfClans/Endpoints/Interfaces/IClansEndpoint.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1069 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/SharpOfClans/SharpOfClans/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.ClashApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.ClashApi.html",
+          "hash": "rCEmIcU7Gc07L9KFTS830sm7Ya5m+TfigpyrM8diQ5A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.ClashApiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.ClashApiException.html",
+          "hash": "Iw9JPm2UHAgSb2wrgBCu1ZzRjNxG+33rKgUn2P4BoZo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.IClansEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.IClansEndpoint.html",
+          "hash": "xFrEN/xAuMg9dS8jsyI4nSEyS4LVkFSNGr7i7CD7DJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.IGoldpassEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.IGoldpassEndpoint.html",
+          "hash": "iirt0ZVX09O91637NQ/aF2+h3gMn+YzMiOev0XhD780="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.ILabelsEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.ILabelsEndpoint.html",
+          "hash": "3D1PAuay/n5d8WJmFHeYNdLm0m6G7XjcBtl5dg111Vk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.ILeaguesEndpoint.html",
+          "hash": "UnjibmXlH0FfX8VgYYwlImQcRgxNNsKiMoEO8WHrvLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.ILocationsEndpoint.html",
+          "hash": "MMav3X5WpHpcLLePqSHna27uNXAz9xGjhdkeC3v2alw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.IPlayersEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.IPlayersEndpoint.html",
+          "hash": "SKQsEsTTo7dFbCBS1zOhgGRoWfpfKFIThk6Yd61+cbc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Interfaces.html",
+          "hash": "H7bMBIvnuEIYq8fE/Ln6uwwtpWPFnY2Il/9fipkpZ4U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Structs.SearchFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Structs.SearchFilter.html",
+          "hash": "Y4smZaWDXEHoxEvTRyVqWdBZ8bx4oVcXgcK2YSb9rpo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Endpoints.Structs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Endpoints.Structs.html",
+          "hash": "kOC0A+RkqhKDDCHKJJvTsQ3t0xaCJS58uuJtwlQIMso="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.Clan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.Clan.html",
+          "hash": "ZTGyzRLfKMLB6Y+dFzBoLww04ZSieSB3EyKpCo4q6Do="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.Enums.GroupState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.Enums.GroupState.html",
+          "hash": "4cDNbe8x+3NySBACjZQhbg4aKYTOBWESGGZLFrT9NM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.Enums.WarFrequency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.Enums.WarFrequency.html",
+          "hash": "Of0cltR/NWznwlEnCb9Uen5rO5G09SFrW/xSo2LwC3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.Enums.WarState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.Enums.WarState.html",
+          "hash": "XbI99tdAQ7If2dsj0jvInV8CJPD+xUQkuyLWeVbA4c0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.Enums.html",
+          "hash": "SRfz6yVajGuXXQzDNSCY5uT8lOEsaCpdXTTNq9jj0Es="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.Member.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.Member.html",
+          "hash": "KVy6Zx+7MJ74UuvISliInSrYQdQu6d/5euFkiql82dM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.Attack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.Attack.html",
+          "hash": "/isOkqlKGlMRvcMBbKitjq0H7aSnIp8bcA9tB8tqmi8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.CurrentWar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.CurrentWar.html",
+          "hash": "gh03RMzzmDXPew3jPlVIqdDh9C/6mI6mXbrkd3iA0eE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.PastWar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.PastWar.html",
+          "hash": "Paz/IddLWPhEtg54mRWpe/FmFYd3rtj8O8HdNxlS9nQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.WarClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.WarClan.html",
+          "hash": "PUkJq7TsMcf7QKMGv/IbVKPb4RYmoJCsXDsPkF/y/pM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.WarLeague.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.WarLeague.html",
+          "hash": "evtr1emmPEfVfwkeHk97tt0wyHxg3qM7u+TYMnjlU2U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.WarMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.WarMember.html",
+          "hash": "MjSzw7K3q9AxzBxJsC6m0oHRDDC7UoDp4oA+PG7KEOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.War.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.War.html",
+          "hash": "TWKFZ4PigxETfMxNTqG3ydZIlh2nFJ/UO7AwY3rzpys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlClan.html",
+          "hash": "YNi+1JCwXb26TcENQvklk6eMNUhb07zhUbG78vb/e3s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlGroup.html",
+          "hash": "pswBBEYUI07o/yLzOvomRJFaGLua9iRy4Ht0qiGIOLw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlMember.html",
+          "hash": "788PoGCjLjD21yCvVuSarUMcxsPLaAFMLVHjGEQHiyc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlRound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.CwlRound.html",
+          "hash": "l9HozBQOE+3LKhsmA2umxsggUQJFUUBpFogkQ/C189s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlAttack.html",
+          "hash": "h4ujDCa9zU5Y66eIGm5TjhyE1uqKfi5B35d8yDkIRbU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWar.html",
+          "hash": "CCChp8Lasky5cw8AtwcUHOpek+pheI8Jn1oBsQ/EGBE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarClan.html",
+          "hash": "G8+Hf0MnnC31FVGRDqD4wZGlAceZM25CzAEwEr/4Bmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.CwlWarMember.html",
+          "hash": "IL/tN1PACM853k0AiOqxauoSlBOT0hNDMH2PV/aS4Ik="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.LeagueWar.html",
+          "hash": "XI/1fRfUlv3uYE+wJcDf6JZvMKQdT80u8zHTt9YKie0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.WarLeague.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.WarLeague.html",
+          "hash": "/Ewf/bsyp/7KBRKB7qjO/gD+Uh9zeK+HaWIGg6DHrR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Clans.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Clans.html",
+          "hash": "CxE+TlFdkgqTvh0R1tQA+oVNIiMsGE/V5HVTKfu7Dsk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Common.BadgeUrls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Common.BadgeUrls.html",
+          "hash": "D5RQIc1tzzdgOfUXZXx4F5SB7Q/Qvi52RzwzuCMshRM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Common.FailedRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Common.FailedRequest.html",
+          "hash": "i2UAWm5cxIwp+VhouqMboGmJsMR2Ul+VIfioCbTP3ds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Common.IconUrls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Common.IconUrls.html",
+          "hash": "H5GkSiyd+vV1VSPCJ+7IM1i9Oz/0oOvBW5TVYNl6oKU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Common.ItemsList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Common.ItemsList-1.html",
+          "hash": "M1Z0RgAnR+CC8r834EtpgxdckqC1vLMUw7e3WUtVwhM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Common.html",
+          "hash": "Iu3bVDKG0fbduR3+/N4izmycm/3SPJ9DKX2ms+O72+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Goldpass.GoldpassSeason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Goldpass.GoldpassSeason.html",
+          "hash": "3zh4IZ8jtq1C17bTwuliAVlb6JAilzgm5O+5ifM1F3Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Goldpass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Goldpass.html",
+          "hash": "OKlJDvbUDylB3yW20EI13EMzcQjCZ5PP+qMfbZGGPyM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Labels.Label.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Labels.Label.html",
+          "hash": "6G21p02M6l7qFt3CzWSLEvlDDIbDm6O2WagZPp/FPjk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Labels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Labels.html",
+          "hash": "mpuAMPVnwXQQLdO/cPlgTWXKh8LuEinnN8cCIDMItrY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.Enums.Leagues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.Enums.Leagues.html",
+          "hash": "6D/Fvwo8m08gqEDL1myCLQa12NanZZEjGeiKMov12RE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.Enums.WarLeagues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.Enums.WarLeagues.html",
+          "hash": "1PPQs27IcsoZltbeQiU7OVnOHJAl4ebWcbaPa/w1WjU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.Enums.html",
+          "hash": "iEjDjP6RyIW103ARkJSnCpNDdnCo8ffXLt/NkK5SqqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.League.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.League.html",
+          "hash": "MQGRbwJ3jzPL/R7K2pfvXu9U42yXO8S8VAT1YA5UDAs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.LeagueSeason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.LeagueSeason.html",
+          "hash": "HNOhqJeLkk9mnp9Y5VSBh5g1KmkGFQs10WaKgavckuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.LegendLeagueTournamentSeason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.LegendLeagueTournamentSeason.html",
+          "hash": "8D3o9CpfX+SjAF9xz+qPjBW86kHH0/1w4W5zA6GSPfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.LegendStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.LegendStatistics.html",
+          "hash": "vh3goTRJ0N4uZnggoNFLCgtLbeKdM0sO8XtlgN0vBrg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Leagues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Leagues.html",
+          "hash": "OdVMgxOGQBSCxTGZFGzZaTNQrqCb6FDDgFjzdP25J/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Locations.Location.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Locations.Location.html",
+          "hash": "D2dENhA5B5JYtMq8k2wku6uR39hsN6ROmF5Z8WZjVmc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Locations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Locations.html",
+          "hash": "aXtBD1TSn4Yy/wkuOlE7qlNDC58I40kqhvVD7ixG3yE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.Hero.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.Hero.html",
+          "hash": "kWCyCYcLh0aBhQj9RGOPlez8UXPaArAlSzj5aAeXSVU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.PlayerItemLevelList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.PlayerItemLevelList.html",
+          "hash": "tsNc0nLpU3YolxPJeOdiwXvkpWgxuqFt7Cn4mjuumGM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.Spell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.Spell.html",
+          "hash": "tVSDR+JS1Bb0xm2gfPe512sntc7EVpZYiy9dDPbKoJM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.Troop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.Troop.html",
+          "hash": "aeoegf3bMzgrzXOTKu2UTS+sxvXPdhjDZgdiQqAjnM4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.ItemLevelLists.html",
+          "hash": "LmfOVxg83mF7+EdZeIGqN1NQJaPoRAU+1FS8S5k5doQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.Player.html",
+          "hash": "PbcZkFlL/9mp/aqKogN0wjReOLD5bxrHDX5hAkmwXYo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.PlayerAchievementProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.PlayerAchievementProgress.html",
+          "hash": "8tBi9pvrm1pHGQmuV23w6uiadYe9RdtQtMCIuznxdM8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.PlayerClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.PlayerClan.html",
+          "hash": "azNvGzuHnnEsHOv2UxElU+JdS1WI/DUlNySMhPWgiUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.PlayerToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.PlayerToken.html",
+          "hash": "tHXkduH0gs4cm3weDP1BQU3xYPyQeDzGYja2fMXytZ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Players.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Players.html",
+          "hash": "Z+AUQNiykjpjZOBK7HXTlSuJyHS4J4Im+VTAgK4RC3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Rankings.ClanRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Rankings.ClanRanking.html",
+          "hash": "UsESTdfukDlYpwcWZW4Em2fWloP/EZqxe55511IOn7Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Rankings.ClanVersusRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Rankings.ClanVersusRanking.html",
+          "hash": "R0yPd25P7wBZaldZHkdU+vZnETdU0+KPq+WuWrwn6w0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Rankings.PlayerRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Rankings.PlayerRanking.html",
+          "hash": "ci74VA1eBMuhmcSSGHRbwIQHrLytD0DaTCXzo3xUcvE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Rankings.PlayerRankingClan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Rankings.PlayerRankingClan.html",
+          "hash": "0hpdWC1o/BH2wxIgbqTIcpn40OG66mpmOGbraOhOeiQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Rankings.PlayerVersusRanking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Rankings.PlayerVersusRanking.html",
+          "hash": "FX3k4fsOwNkg2iFJ1/2ipyYtk/eQmLd+9XLf22aOIg8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Models.Rankings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Models.Rankings.html",
+          "hash": "pquYdhNiJLAXyfYJZjCDmuImvOhVTSRbycOgaRlyowM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Paging.Cursors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Paging.Cursors.html",
+          "hash": "ECOsqDyoC+2O+9XWsA+x5QvOKIzrPz2iq+Ih0cHs6ow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Paging.Paging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Paging.Paging.html",
+          "hash": "68kIXPylsfK2efZvoJYUX1BLljooG6STDk32OKBKvhY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Paging.PagingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Paging.PagingExtensions.html",
+          "hash": "JK/jkZUWedt3LtBfy+7khlZKh7jsfKX0Wbkrq7xo2Xo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Paging.PagingFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Paging.PagingFilter.html",
+          "hash": "6+Wg73CztiaMV6q//bMJR8jYZSL7fklVX3QcvEffs6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.Paging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.Paging.html",
+          "hash": "Wi5TnxCwaVXAluBGJckTZ4gv9TEsV+I0NGBwpFN09Zs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SharpOfClans.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SharpOfClans.html",
+          "hash": "jT+utnn9xRx8cIUztzDPkrWYCUQaKvdOE5q7HdRTuog="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "LfUcpkxnTwjEjF+eX6lgeE63ZB8vO/KT9zX6hNBmFyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "nz9qTtGvL8JKiDN0t8jEhDjcb5iGMLVxvonnfp2cBuA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/gettingStarted.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/gettingStarted.html",
+          "hash": "Yeoe+uA/KHhx2PukYB9rGLHT1TaH2RWS/9r9qxnj1NQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "T7Dc5I0KOnhH49dyLhSx1v7w59qdqNZp7V8DlTMh5mY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "MyRQt1uTaJdc712YUbx20M3NgzKSRBqyLErFMZiSqhg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "fXy3BgPb5qfuyAWsL+13IyDSK5k1P6BAxN5BhdvmeL4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 76,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
