@@ -1,4 +1,4 @@
-# Sharp Of Clans [![build status](https://github.com/Matcheryt/SharpOfClans/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Matcheryt/SharpOfClans/actions) [![Nuget](https://img.shields.io/nuget/v/SharpOfClans)](https://www.nuget.org/packages/SharpOfClans/)
+# Sharp Of Clans [![build status](https://github.com/Matcheryt/SharpOfClans/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Matcheryt/SharpOfClans/actions/workflows/dotnet.yml) [![docs status](https://github.com/Matcheryt/SharpOfClans/actions/workflows/docs.yml/badge.svg)](https://github.com/Matcheryt/SharpOfClans/actions/workflows/docs.yml) [![Nuget](https://img.shields.io/nuget/v/SharpOfClans)](https://www.nuget.org/packages/SharpOfClans/)
 #### A Clash Of Clans API Wrapper for .NET 5.0
 ##### Inspired by [CocNET](https://github.com/smietanka/CocNET) and [RiotSharp](https://github.com/BenFradet/RiotSharp)
 
@@ -42,6 +42,9 @@ var player = await clashApi.Players.GetPlayerAsync("#L22YL908");
 // Write player's name to the console
 Console.WriteLine($"The player's name is {player.Name}.");
 ```
+
+## Documentation
+You can find more documentation on SharpOfClans' [documentation page](https://telmoduarte.me/SharpOfClans/).
 
 ## Dependencies
 - [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
